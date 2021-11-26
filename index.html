@@ -12,6 +12,7 @@
 <body>
     <h1>LocumEarns</h1>
     <div>
+        <p id="trial">some message</p>
         <!--Target Monthly Amount to make section-->
         <label for="month-target">The target total to earn this month is:</label>
         <input id="month-target" name="month-target" type="number" min="0" max="99999">
@@ -26,11 +27,11 @@
         <h3>Days of the Month of:</h3>
         <div>
             <!--Have JS display the actual month in this below div-->
-        </div>
+        </div id="day-div">
         <!-- Daily Earning Input fields-->
         <form action="" method="post">
+            <textarea name="text-area" id="text-area" cols="2" rows="2"></textarea>
             <input class="x-day" id="day-one" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
             <input class="x-day" type="number" min="0" max="999">
             <input class="x-day" type="number" min="0" max="999">
             <input class="x-day" type="number" min="0" max="999">
