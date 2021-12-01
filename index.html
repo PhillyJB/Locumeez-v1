@@ -12,15 +12,20 @@
 <body>
     <h1>LocumEarns</h1>
     <div>
-        <p id="trial">some message</p>
         <!--Target Monthly Amount to make section-->
         <label for="month-target">The target total to earn this month is:</label>
-        <input id="month-target" name="month-target" type="number" min="0" max="99999">
+        <input id="month-target" name="month-target" type="number" min="0" max="999">
     </div>
     <div>
-        <!--Average begin made sections-->
+        <!--Total made so far this month-->
+        <label for="month-total">So far you have made a total of:</label>
+        <span id="month-total" name="month-total" style="background-color: red;"></span>
+
+    </div>
+    <div>
+        <!--Average being made section-->
         <label for="daily-average">Currently you are averaging (per day):</label>
-        <input id="daily-average" name="daily-average" type="number" min="0" max="9999">
+        <span id="daily-average" name="daily-average" style="background-color: blue;"></span>
 
     </div>
     <div>
@@ -28,40 +33,23 @@
         <div>
             <!--Have JS display the actual month in this below div-->
         </div id="day-div">
-        <!-- Daily Earning Input fields-->
+
+        <!-- Daily Earning Input fields for testing -->
+        <div>
+            <p class="x-day-temp">500</p>
+            <p class="x-day-temp">350</p>
+            <p class="x-day-temp">350</p>
+            <p class="x-day-temp">375</p>
+            <p class="x-day-temp">465</p>
+        </div>
+        <!--Actua daily earning fields we will use-->
         <form action="" method="post">
-            <textarea name="text-area" id="text-area" cols="2" rows="2"></textarea>
-            <input class="x-day" id="day-one" type="number" min="0" max="999">
             <input class="x-day" type="number" min="0" max="999">
             <input class="x-day" type="number" min="0" max="999">
             <input class="x-day" type="number" min="0" max="999">
             <input class="x-day" type="number" min="0" max="999">
             <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999"> 
+            <button>Update</button>
         </form>
 
     </div>
