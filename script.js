@@ -16,3 +16,7 @@ const averageEarnedPerDayWorked = totalEarnings/arrayOfDaysEarned.length;
 console.log(averageEarnedPerDayWorked);
 const displayAverageEarnedPerDayWorked = document.getElementById("daily-average")
 displayAverageEarnedPerDayWorked.innerHTML = averageEarnedPerDayWorked;
+
+//gather information from the Form
+
+const 

@@ -28,8 +28,7 @@
         <span id="daily-average" name="daily-average" style="background-color: blue;"></span>
 
     </div>
-    <div>
-        <h3>Days of the Month of:</h3>
+        <h3>Days of the Month of:<span><!--Insert current month using Javascrip--></span></h3>
         <div>
             <!--Have JS display the actual month in this below div-->
         </div id="day-div">
@@ -42,15 +41,17 @@
             <p class="x-day-temp">375</p>
             <p class="x-day-temp">465</p>
         </div>
-        <!--Actua daily earning fields we will use-->
-        <form action="" method="post">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <input class="x-day" type="number" min="0" max="999">
-            <button>Update</button>
+        <!--Actual daily earning fields we will use-->
+        <div class="wrapper">
+        <form class="form">
+            <input class="x-day" type="number" min="0" max="999" placeholder="day1">
+            <input class="x-day" type="number" min="0" max="999" placeholder="day1">
+            <input class="x-day" type="number" min="0" max="999" placeholder="day1">>
+            <input class="x-day" type="number" min="0" max="999" placeholder="day1">>
+            <input class="x-day" type="number" min="0" max="999" placeholder="day1">
+            <input type="submit" name="submit" value="submit">
         </form>
+    </div>
 
     </div>
 
