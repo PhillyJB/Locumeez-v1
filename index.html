@@ -13,43 +13,40 @@
     <h1>LocumEarns</h1>
     <div>
         <!--Target Monthly Amount to make section-->
-        <label for="month-target">The target total to earn this month is:</label>
-        <input id="month-target" name="month-target" type="number" min="0" max="999">
+        <label for="month-target">The target total to earn this month is: £</label>
+        <input id="month-target" name="month-target" type="number" min="0" max="99999" placeholder="insert total"><button id="target-btn">Update Target Amount</button>
+    </div>
+    <div>
+        <!--Target Monthly Amount left to make-->
+        <label for="left-to-target">The amount left to reach your target this month is: £</label>
+        <span id="left-to-target" style="background-color: green;"></span>
     </div>
     <div>
         <!--Total made so far this month-->
-        <label for="month-total">So far you have made a total of:</label>
+        <label for="month-total">So far you have made a total of: £</label>
         <span id="month-total" name="month-total" style="background-color: red;"></span>
 
     </div>
     <div>
         <!--Average being made section-->
-        <label for="daily-average">Currently you are averaging (per day):</label>
+        <label for="daily-average">Currently you are averaging (per day): £</label>
         <span id="daily-average" name="daily-average" style="background-color: blue;"></span>
 
     </div>
-        <h3>Days of the Month of:<span><!--Insert current month using Javascrip--></span></h3>
+        <h3>Days of the Month of:<span id="date-month"><!--Insert current month using Javascrip--></span></h3>
         <div>
             <!--Have JS display the actual month in this below div-->
         </div id="day-div">
 
-        <!-- Daily Earning Input fields for testing -->
-        <div>
-            <p class="x-day-temp">500</p>
-            <p class="x-day-temp">350</p>
-            <p class="x-day-temp">350</p>
-            <p class="x-day-temp">375</p>
-            <p class="x-day-temp">465</p>
-        </div>
         <!--Actual daily earning fields we will use-->
         <div class="wrapper">
         <form class="form">
             <input class="x-day" type="number" min="0" max="999" placeholder="day1">
-            <input class="x-day" type="number" min="0" max="999" placeholder="day1">
-            <input class="x-day" type="number" min="0" max="999" placeholder="day1">>
-            <input class="x-day" type="number" min="0" max="999" placeholder="day1">>
-            <input class="x-day" type="number" min="0" max="999" placeholder="day1">
-            <input type="submit" name="submit" value="submit">
+            <input class="x-day" type="number" min="0" max="999" placeholder="day2">
+            <input class="x-day" type="number" min="0" max="999" placeholder="day3">
+            <input class="x-day" type="number" min="0" max="999" placeholder="day4">
+            <input class="x-day" type="number" min="0" max="999" placeholder="day5">
+            <button id="btn">Update Locum Log</button>
         </form>
     </div>
 

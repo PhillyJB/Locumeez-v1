@@ -1,22 +1,37 @@
 
-//capture the array of earning values and iterate through it
-var arrayOfDaysEarned = document.getElementsByClassName("x-day-temp");
-var totalEarnings = 0;
-for (eachDayWorked of arrayOfDaysEarned){
-   let amountEarnedOnDay = Number(eachDayWorked.innerHTML);
-   totalEarnings += amountEarnedOnDay;
+function grabTarget(ev) {
+
+   let targetAmount = Number(document.getElementById("month-target").value);
+   return targetAmount;
 }
 
-//get the total earnings from iteration to insert in the HTML document to show user.
-const totalEarnedForTheMonth = document.getElementById("month-total");
-totalEarnedForTheMonth.innerHTML = totalEarnings;
 
-//average earned on a per day basis displayed to user
-const averageEarnedPerDayWorked = totalEarnings/arrayOfDaysEarned.length;
-console.log(averageEarnedPerDayWorked);
-const displayAverageEarnedPerDayWorked = document.getElementById("daily-average")
-displayAverageEarnedPerDayWorked.innerHTML = averageEarnedPerDayWorked;
-
+let sumOfDaysEarnings = 0;
 //gather information from the Form
+function calcEarnings(ev) {
+   //prevent submit button event clearing the form
+   ev.preventDefault();
+   let formData = document.getElementsByClassName('x-day');
+   for(i of formData){
+      sumOfDaysEarnings += Number(i.value);
+   }
+   //total earned for the month
+   const totalEarnedForTheMonth = document.getElementById("month-total");
+   totalEarnedForTheMonth.innerHTML = sumOfDaysEarnings
 
-const 
+   //average earned on a per day basis displayed to user
+   const averageEarnedPerDayWorked = sumOfDaysEarnings/formData.length;
+   const displayAverageEarnedPerDayWorked = document.getElementById("daily-average")
+   displayAverageEarnedPerDayWorked.innerHTML = averageEarnedPerDayWorked;
+
+   //amount left to make to reach month target
+   const targetAmountForMonth = document.getElementById("left-to-target");
+   targetAmountForMonth.innerHTML = grabTarget() - sumOfDaysEarnings;
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+
+   document.getElementById('btn').addEventListener('click', calcEarnings);
+   document.getElementById("target-btn").addEventListener('click', grabTarget);
+
+});
