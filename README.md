@@ -1,1 +1,1 @@
-# LocumEarns
+# Locumeez-v1
